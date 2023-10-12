@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent {
-
+  @Input() control: FormControl = new FormControl();
+  @Input() type = 'text';
+  @Input() placeholder = '';
+  @Input() format = '';
+  @Input() phonePipe = false;
 }
